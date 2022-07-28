@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/dc1e881ccc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Bulls and Cows Game</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Moooo! <br />
+        Let's play the game
+      </h1>
+    </header>
+
+    <main>
+      <div class="levels">
+        <button onclick="loadPrompt('easy')">START EASY!</button>
+        <button onclick="loadPrompt('medium')">TAKE A CHALLENGE!</button>
+        <button onclick="loadPrompt('hard')">GO PRO!</button>
+      </div>
+
+      <footer>
+        <div class="rule1">
+          <ul>
+            <li>All digits are unique</li>
+            <li>Unlimited guesses</li>
+          </ul>
+        </div>
+
+        <div class="rule2">
+          <ul>
+            <li>All digits are unique</li>
+            <li>15 guesses</li>
+          </ul>
+        </div>
+
+        <div class="rule3">
+          <ul>
+            <li>Digits can be repeat and 0 is included</li>
+            <li>10 guesses</li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+
+    <script src="index.js"></script>
+    <script>
+      function loadPrompt(level) {
+        const name = prompt("Hi, What is your name?");
+
+        while (name == " " || name == null) {
+          name = prompt("please, enter your name");
+        }
+        const cowsAndBulls = new Game(name, level);
+        cowsAndBulls.startNow();
+      }
+    </script>
+  </body>
+</html>
