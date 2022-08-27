@@ -1,5 +1,6 @@
 {
   "name": "bulls-and-cows",
+  "homepage": ".",
   "version": "1.0.0",
   "description": "Bulls and Cows",
   "main": "index.js",
